@@ -1,0 +1,28 @@
+<view class="taste-page">
+  <view class="soft-card">
+    <view class="taste-title">口味 Taste</view>
+    <view class="taste-subtitle">一个轻私密、有温度的食物生活记录小程序</view>
+  </view>
+
+  <view class="soft-card info-row">
+    <text class="label">版本</text>
+    <text class="value">{{version}}</text>
+  </view>
+
+  <view class="soft-card info-row">
+    <text class="label">云开发环境</text>
+    <text class="value env">{{envId}}</text>
+  </view>
+
+  <view class="soft-card info-row">
+    <text class="label">记录总数</text>
+    <text class="value">{{recordCount}}</text>
+  </view>
+
+  <view class="soft-card">
+    <view class="taste-subtitle">Coming Soon</view>
+    <view class="coming-item">月度回顾</view>
+    <view class="coming-item">菜品成长历史</view>
+    <view class="coming-item">情绪筛选与收藏</view>
+  </view>
+</view>

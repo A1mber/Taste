@@ -1,0 +1,29 @@
+<view class="taste-page" wx:if="{{record}}">
+  <view class="soft-card" wx:if="{{record.images.length}}">
+    <image
+      wx:for="{{record.images}}"
+      wx:key="*this"
+      class="detail-cover"
+      mode="aspectFill"
+      src="{{item}}"
+      data-src="{{item}}"
+      bindtap="previewImage"
+    ></image>
+  </view>
+
+  <view class="soft-card">
+    <view class="taste-title mini">{{record.title || '未命名记录'}}</view>
+    <view class="detail-meta">
+      <text class="soft-tag">{{typeText}}</text>
+      <text class="soft-tag mood">{{moodText}}</text>
+      <text class="soft-tag appetite">{{appetiteText}}</text>
+    </view>
+    <view class="detail-date">{{displayDate}}</view>
+    <view class="detail-food" wx:if="{{record.foodName}}">食物：{{record.foodName}}</view>
+    <view class="detail-note">{{record.note || '今天没有写描述。'}}</view>
+  </view>
+</view>
+
+<view class="taste-page" wx:else>
+  <view class="soft-card empty-wrap">记录不存在或已被删除</view>
+</view>

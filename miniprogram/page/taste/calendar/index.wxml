@@ -1,0 +1,27 @@
+<view class="taste-page">
+  <view class="soft-card month-head">
+    <button class="soft-button-secondary nav-btn" bindtap="prevMonth">上月</button>
+    <view class="month-title">{{year}} 年 {{month}} 月</view>
+    <button class="soft-button-secondary nav-btn" bindtap="nextMonth">下月</button>
+  </view>
+
+  <view class="soft-card">
+    <view class="week-row">
+      <view class="week-cell" wx:for="{{weekTitles}}" wx:key="*this">{{item}}</view>
+    </view>
+
+    <view class="grid">
+      <view
+        wx:for="{{cells}}"
+        wx:key="key"
+        class="day-cell {{item.empty ? 'empty' : ''}} {{item.isToday ? 'today' : ''}}"
+        data-date="{{item.date}}"
+        data-has="{{item.hasRecord}}"
+        bindtap="onTapDay"
+      >
+        <text wx:if="{{!item.empty}}">{{item.day}}</text>
+        <view wx:if="{{item.hasRecord}}" class="dot"></view>
+      </view>
+    </view>
+  </view>
+</view>

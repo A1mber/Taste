@@ -1,5 +1,11 @@
 {
   "pages": [
+    "page/taste/home/index",
+    "page/taste/calendar/index",
+    "page/taste/create/index",
+    "page/taste/review/index",
+    "page/taste/profile/index",
+    "page/taste/detail/index",
     "page/component/index",
     "page/API/index",
     "page/cloud/index",
@@ -211,40 +217,36 @@
     }
   },
   "window": {
-    "navigationBarTextStyle": "@navigationBarTextStyle",
-    "navigationBarTitleText": "演示",
-    "navigationBarBackgroundColor": "@navigationBarBackgroundColor",
-    "backgroundColor": "@backgroundColor"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "口味 Taste",
+    "navigationBarBackgroundColor": "#FAF6F0",
+    "backgroundColor": "#FAF6F0"
   },
   "tabBar": {
-    "color": "@tabBarColor",
-    "selectedColor": "@tabBarSelectedColor",
-    "borderStyle": "@tabBarBorderStyle",
-    "backgroundColor": "@tabBarBackgroundColor",
+    "color": "#8C786A",
+    "selectedColor": "#C58D61",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFDF9",
     "list": [
       {
-        "pagePath": "page/component/index",
-        "iconPath": "@iconPathComponent",
-        "selectedIconPath": "@selectedIconPathComponent",
-        "text": "组件"
+        "pagePath": "page/taste/home/index",
+        "text": "首页"
       },
       {
-        "pagePath": "page/extend/index",
-        "iconPath": "@iconPathComponent",
-        "selectedIconPath": "@selectedIconPathComponent",
-        "text": "扩展能力"
+        "pagePath": "page/taste/calendar/index",
+        "text": "日历"
       },
       {
-        "pagePath": "page/API/index",
-        "iconPath": "@iconPathAPI",
-        "selectedIconPath": "@selectedIconPathAPI",
-        "text": "接口"
+        "pagePath": "page/taste/create/index",
+        "text": "创建"
       },
       {
-        "pagePath": "page/cloud/index",
-        "iconPath": "@iconPathCloud",
-        "selectedIconPath": "@selectedIconPathCloud",
-        "text": "云开发"
+        "pagePath": "page/taste/review/index",
+        "text": "回顾"
+      },
+      {
+        "pagePath": "page/taste/profile/index",
+        "text": "我的"
       }
     ]
   },

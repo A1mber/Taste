@@ -1,0 +1,51 @@
+@import "../common/theme-soft-morning.wxss";
+
+page {
+  background: #faf6f0;
+  display: block;
+}
+
+.mini {
+  font-size: 40rpx;
+}
+
+.review-item {
+  margin-top: 18rpx;
+}
+
+.review-cover {
+  width: 100%;
+  height: 260rpx;
+  border-radius: 18rpx;
+}
+
+.review-title {
+  margin-top: 14rpx;
+  font-size: 32rpx;
+  color: #4c4038;
+  font-weight: 600;
+}
+
+.review-row {
+  display: flex;
+  gap: 12rpx;
+  align-items: center;
+  margin-top: 12rpx;
+  flex-wrap: wrap;
+}
+
+.mood {
+  background: #e7c7bc;
+}
+
+.review-date {
+  color: #8c786a;
+  font-size: 24rpx;
+}
+
+.review-note {
+  margin-top: 12rpx;
+  font-size: 27rpx;
+  color: #6f5d50;
+  line-height: 1.7;
+}

@@ -1,0 +1,24 @@
+<view class="taste-page">
+  <view class="soft-card">
+    <view class="taste-title mini">我的记录</view>
+    <view class="taste-subtitle">按时间倒序，回看每一段日常。</view>
+  </view>
+
+  <view wx:if="{{records.length}}">
+    <view class="soft-card review-item" wx:for="{{records}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+      <image wx:if="{{item.images.length}}" class="review-cover" mode="aspectFill" src="{{item.images[0]}}"></image>
+      <view class="review-title">{{item.title || '未命名记录'}}</view>
+      <view class="review-row">
+        <text class="soft-tag">{{item.typeText}}</text>
+        <text class="soft-tag mood">{{item.moodText}}</text>
+        <text class="review-date">{{item.date}}</text>
+      </view>
+      <view class="review-note" wx:if="{{item.note}}">{{item.note}}</view>
+    </view>
+  </view>
+
+  <view wx:else class="soft-card empty-wrap">
+    <view>还没有历史记录</view>
+    <view>去“创建”页写下今天吧</view>
+  </view>
+</view>

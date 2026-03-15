@@ -1,0 +1,104 @@
+.taste-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #faf6f0 0%, #f5ede3 100%);
+  color: #4c4038;
+  padding: 28rpx;
+  box-sizing: border-box;
+}
+
+.taste-title {
+  font-size: 48rpx;
+  font-weight: 600;
+  color: #4c4038;
+  line-height: 1.35;
+}
+
+.taste-subtitle {
+  margin-top: 12rpx;
+  font-size: 28rpx;
+  color: #8c786a;
+  line-height: 1.7;
+}
+
+.soft-card {
+  background: #fffdf9;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  box-shadow: 0 10rpx 30rpx rgba(140, 120, 106, 0.1);
+  margin-top: 20rpx;
+}
+
+.soft-button-primary {
+  border: none;
+  background: #c58d61;
+  color: #ffffff;
+  border-radius: 999rpx;
+  font-size: 30rpx;
+  padding: 0 40rpx;
+}
+
+.soft-button-secondary {
+  border: none;
+  background: #f5ede3;
+  color: #4c4038;
+  border-radius: 999rpx;
+  font-size: 28rpx;
+  padding: 0 32rpx;
+}
+
+.soft-tag {
+  display: inline-block;
+  padding: 8rpx 20rpx;
+  border-radius: 999rpx;
+  background: #eadbc8;
+  color: #4c4038;
+  font-size: 24rpx;
+}
+
+.empty-wrap {
+  text-align: center;
+  color: #8c786a;
+  padding: 60rpx 0 20rpx;
+}
+
+.field-label {
+  font-size: 26rpx;
+  color: #8c786a;
+  margin-bottom: 14rpx;
+}
+
+.soft-input,
+.soft-textarea,
+.soft-picker {
+  background: #fffdf9;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #4c4038;
+  border: 2rpx solid #eee3d6;
+}
+
+.soft-textarea {
+  min-height: 180rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.chip-item {
+  background: #f5ede3;
+  color: #8c786a;
+  border-radius: 999rpx;
+  padding: 12rpx 20rpx;
+  font-size: 24rpx;
+}
+
+.chip-item.active {
+  background: #d9a77a;
+  color: #ffffff;
+}

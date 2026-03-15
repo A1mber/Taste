@@ -1,0 +1,33 @@
+<view class="taste-page home-page">
+  <view class="hero soft-card">
+    <view class="taste-title">一口食物，一口生活。</view>
+    <view class="taste-subtitle">轻轻记下今天的味道，留住那一刻的生活温度。</view>
+    <button class="soft-button-primary hero-btn" bindtap="goCreate">记录今天</button>
+  </view>
+
+  <view class="soft-card">
+    <view class="section-head">
+      <text class="section-title">最近记录</text>
+      <text class="section-link" bindtap="goReview">查看全部</text>
+    </view>
+
+    <view wx:if="{{records.length}}">
+      <view class="record-item" wx:for="{{records}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+        <image wx:if="{{item.images.length}}" class="record-cover" mode="aspectFill" src="{{item.images[0]}}"></image>
+        <view class="record-body">
+          <view class="record-title">{{item.title || '未命名记录'}}</view>
+          <view class="record-meta">
+            <text class="soft-tag">{{item.typeText}}</text>
+            <text class="soft-tag mood-tag">{{item.moodText}}</text>
+            <text class="record-date">{{item.date}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:else class="empty-wrap">
+      <view>还没有记录</view>
+      <view>去创建第一条生活片段吧</view>
+    </view>
+  </view>
+</view>

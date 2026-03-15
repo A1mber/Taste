@@ -1,0 +1,70 @@
+<view class="taste-page">
+  <view class="soft-card">
+    <view class="field-label">图片</view>
+    <view class="upload-box" bindtap="chooseImage">
+      <image wx:if="{{localImagePaths.length}}" class="upload-image" mode="aspectFill" src="{{localImagePaths[0]}}" bindtap="previewImage"></image>
+      <view wx:else class="upload-placeholder">点击上传今天的画面</view>
+    </view>
+  </view>
+
+  <view class="soft-card">
+    <view class="field-label">标题</view>
+    <input class="soft-input" placeholder="比如：周末早午餐" value="{{title}}" bindinput="onInputTitle" />
+
+    <view class="field-label mt">食物名称（可选）</view>
+    <input class="soft-input" placeholder="比如：牛肉粉" value="{{foodName}}" bindinput="onInputFoodName" />
+
+    <view class="field-label mt">日期</view>
+    <picker mode="date" value="{{date}}" bindchange="onDateChange">
+      <view class="soft-picker">{{date}}</view>
+    </picker>
+  </view>
+
+  <view class="soft-card">
+    <view class="field-label">记录类型</view>
+    <view class="chip-row">
+      <view
+        wx:for="{{typeOptions}}"
+        wx:key="value"
+        class="chip-item {{type === item.value ? 'active' : ''}}"
+        data-value="{{item.value}}"
+        bindtap="onSelectType"
+      >
+        {{item.label}}
+      </view>
+    </view>
+
+    <view class="field-label mt">心情</view>
+    <view class="chip-row">
+      <view
+        wx:for="{{moodOptions}}"
+        wx:key="value"
+        class="chip-item {{mood === item.value ? 'active' : ''}}"
+        data-value="{{item.value}}"
+        bindtap="onSelectMood"
+      >
+        {{item.label}}
+      </view>
+    </view>
+
+    <view class="field-label mt">食欲</view>
+    <view class="chip-row">
+      <view
+        wx:for="{{appetiteOptions}}"
+        wx:key="value"
+        class="chip-item {{appetite === item.value ? 'active' : ''}}"
+        data-value="{{item.value}}"
+        bindtap="onSelectAppetite"
+      >
+        {{item.label}}
+      </view>
+    </view>
+  </view>
+
+  <view class="soft-card">
+    <view class="field-label">描述</view>
+    <textarea class="soft-textarea" placeholder="写下一句今天的生活状态" value="{{note}}" bindinput="onInputNote"></textarea>
+  </view>
+
+  <button class="soft-button-primary submit-btn" loading="{{submitting}}" bindtap="submitRecord">保存这份味道</button>
+</view>

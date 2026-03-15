@@ -1,0 +1,74 @@
+@import "../common/theme-soft-morning.wxss";
+
+page {
+  background: #faf6f0;
+  display: block;
+}
+
+.month-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.month-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #4c4038;
+}
+
+.nav-btn {
+  margin: 0;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+.week-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10rpx;
+}
+
+.week-cell {
+  text-align: center;
+  font-size: 24rpx;
+  color: #8c786a;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10rpx;
+}
+
+.day-cell {
+  height: 96rpx;
+  border-radius: 16rpx;
+  background: #fffdf9;
+  border: 2rpx solid #f0e5d8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #4c4038;
+  font-size: 26rpx;
+  position: relative;
+}
+
+.day-cell.empty {
+  background: transparent;
+  border: none;
+}
+
+.day-cell.today {
+  border-color: #d9a77a;
+  background: #f5ede3;
+}
+
+.dot {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: #c58d61;
+  margin-top: 6rpx;
+}

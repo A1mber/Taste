@@ -1,0 +1,36 @@
+@import "../common/theme-soft-morning.wxss";
+
+page {
+  background: #faf6f0;
+  display: block;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  color: #8c786a;
+  font-size: 27rpx;
+}
+
+.value {
+  color: #4c4038;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.env {
+  font-size: 24rpx;
+  max-width: 420rpx;
+  text-align: right;
+  word-break: break-all;
+}
+
+.coming-item {
+  margin-top: 14rpx;
+  color: #6f5d50;
+  font-size: 28rpx;
+}
